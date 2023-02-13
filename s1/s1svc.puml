@@ -1,0 +1,11 @@
+@startuml
+title gRPC calls
+
+autonumber
+
+c1 -> s1: Register()
+s1 --> c1: Handle
+
+c1 -> s1: Info(handle)
+c1 <-- s1: Info{}
+@enduml

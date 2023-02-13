@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package s1;
+
+service S1 {
+  rpc register(Empty) returns (Handle);
+  rpc Info(Handle) returns (InfoData);
+}
+
+message Empty {}
+
+message Handle {
+  int32 handle = 1;
+}
+
+message InfoData {
+  string version = 1;
+  string name = 2;
+}
+
+
